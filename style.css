@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico|Quicksand');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html, body, .full-height {
+	height: 100%;
+	margin: auto;
+	font-family: Quicksand, Verdana, Arial;
+	overflow: hidden;
+}
+
+a {
+	outline: 0;
+}
+
+ul{
+	list-style: none;
+}
+
+li {
+	margin: 15px 0;
+}
+
+#menu {
+	position: fixed;
+	width: 17%;
+	background-color: yellow;
+	text-align: center;
+	background-image: url("img/funky-lines.png");
+	-webkit-animation: constructionLeft 3s ease both;
+	animation: constructionLeft 3s ease both;
+	border: 2px solid black;
+	z-index: 1;
+}
+
+#menu h1{
+	font-family: Pacifico, Arial;
+}
+
+#photo{
+	background-image: url("img/photo.jpeg");
+	background-size: 120%;
+	background-repeat: no-repeat;
+	border-radius: 50%;
+}
+.title{
+	font-family: Pacifico, Arial;
+	text-align: center;
+}
+.bold{
+	font-weight: bold;
+}
+.italic{
+	font-style: italic;
+}
+.red{
+	color: red;
+}
+#links a{
+	width: 100%;
+	text-decoration: none;
+	color: black;	
+	font-weight: bold;
+}
+
+.col{
+	/* border: 5px solid green; */
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+}
+
+.row{
+	/* border: 5px solid red; */
+	display: flex;
+	flex: 1;
+	flex-direction: row;
+}
+
+.content{
+	flex: 5;
+	padding: 25px;
+	-webkit-animation: fadeIn 4000ms ease both;
+	animation: fadeIn 4000ms ease both;
+	background-color: LightBlue;
+}
+
+.about{
+	flex: 3;
+}
+
+
+.double{
+	flex: 2;
+}
+
+.center-items{
+	align-items: center;
+}
+
+.end-self{
+	align-self: flex-end;
+}
+
+.start-self{
+	align-self: flex-start;
+}
+
+/*------ Progress Bar -------*/
+#loading-background{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background-color: rgba(0,0,0,0.6);
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	text-align: center;
+	opacity: 1;
+	transition: opacity 1.5s ease-in-out;
+	-moz-transition: opacity .25s ease-in-out;
+	-webkit-transition: opacity .25s ease-in-out;
+}
+
+#loading{
+	position: relative;
+	top: 45%;
+	color: white;
+}
+
+.bar {
+	margin: auto;
+	font-size: 15px;
+	width: 30em;
+	height: 1em;
+	border-radius: 0.5em;
+	position: relative;
+	background: #f2f2f2;
+	box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1);
+}
+
+.bar .progress {
+	position: relative;
+	font-size: 1em;
+	background: tomato;
+	height: 1em;
+	border-radius: 0.5em;
+	width: 0%;
+}
+
+.tooltip:before, .tooltip:after {
+	content: "";
+	position: absolute;
+	opacity: 1;
+}
+
+.tooltip:before {
+	bottom: -10px;
+	right: -5px;
+	border: 5px solid;
+	border-color: transparent transparent tomato transparent;
+	transition: opacity 0.1s;
+}
+
+.tooltip:after {
+	content: attr(percentage);
+	bottom: 0;
+	right: 0;
+	white-space: nowrap;
+	padding: 0.6em 1em;
+	border-radius: 2em;
+	line-height: 1;
+	color: #fff;
+	background: tomato;
+	transform: translateX(50%) translateY(100%) translateY(10px);
+}
+
+
+.bubble {
+	position: relative;
+	background: #00aabb;
+	border-radius: .6em;
+	text-align: center;
+	width: 60%;
+	height: 20%;
+	padding:15px;
+}
+
+.bubble.bubleft:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-top-color: #00aabb;
+	border-bottom: 0;
+	border-left: 0;
+	margin-left: -10px;
+	margin-bottom: -20px;
+}
+
+.bubble.bubright:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-top-color: #00aabb;
+	border-bottom: 0;
+	border-right: 0;
+	margin-left: -10px;
+	margin-bottom: -20px;
+}
+
+.mail-ico{
+	position: absolute;
+	background-image: url("img/mail_ico.svg");
+	background-size: contain;
+	left: 10px;
+	width: 25px;
+	height: 25px;
+}
+
+.phone-ico{
+	position: absolute;
+	background-image: url("img/phone_ico.svg");
+	background-size: contain;
+	left: 10px;
+	width: 25px;
+	height: 25px;
+}
+.birth-ico{
+	display: inline-block;
+	background-image: url("img/birth_ico.svg");
+	background-size: contain;
+	left: 10px;
+	width: 25px;
+	height: 25px;
+}
+
+.car-ico{
+	display: inline-block;
+	background-image: url("img/car_ico.svg");
+	background-size: contain;
+	left: 10px;
+	width: 25px;
+	height: 25px;
+}
+
+.home-ico{
+	display: inline-block;
+	background-image: url("img/home_ico.svg");
+	background-size: contain;
+	left: 10px;
+	width: 25px;
+	height: 25px;
+}
+
+.formation {
+	margin: 10px;
+	position: relative;
+	background: #000000;
+	border-radius: .4em;
+	opacity: 0.7;
+	color: white;
+	padding: 5px;
+}
+
+.formation:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-bottom-color: #000000;
+	border-top: 0;
+	margin-left: -20px;
+	margin-top: -20px;
+}
+
+@-webkit-keyframes constructionLeft { 
+	0% { 
+		left:-500px;
+	}
+	100% { 
+		left: 0px;
+	} 
+}
+
+@-webkit-keyframes constructionRight { 
+	0% { 
+		right:-500px;
+	}
+	100% { 
+		right: 0px;
+	} 
+}
+
+@-webkit-keyframes fadeIn { 
+	0% { 
+		opacity: 0;
+	}
+	100% { 
+		opacity: 1;
+	} 
+}
