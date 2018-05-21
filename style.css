@@ -360,6 +360,15 @@ li {
 .competence{
 	text-align: center;
 	padding-top: 20%;
+	position: relative;
+}
+
+.competence h2{
+	position: absolute;
+	top: 80%;
+	left: 40%;
+	color: white;
+	text-shadow: 2px 2px black;
 }
 
 #eng{
@@ -387,7 +396,8 @@ li {
 	text-align: center;
 	color: white;
 	text-shadow: 2px 2px black;
-	padding-top: 9%;
+	padding: auto;
+	padding-top: 11%;
 }
 
 #countdown{
@@ -416,7 +426,33 @@ li {
 	top: -5px;
 }
 
+/*------ Camenberts -------*/
+.pie {
+	width: 90px;
+	height: 90px;
+	display: inline-block;
+	transform: rotate(-90deg);
+	margin: auto;
+}
 
+svg {
+	background: transparent;
+	border-radius: 50%;
+	border: 2px solid black;
+	box-shadow: 10px 10px 2px 1px rgba(0, 0, 255, .2);
+}
+
+circle {
+	fill: transparent;
+	stroke: LightSlateGray;
+	stroke-width: 32;
+}
+
+@keyframes grow { to { stroke-dasharray: 100 100 } }
+
+.pie.animated circle {
+	animation: grow 2s linear;
+}
 
 @-webkit-keyframes constructionLeft { 
 	0% { 
