@@ -21,6 +21,7 @@ function progressTick(){
 /*---------------------------------------------------*/
 
 
+/*--------------- DETECTION DU SCROLL ---------------*/
 var screens = document.querySelectorAll('body > div');
 var i = 2;
 
@@ -40,6 +41,26 @@ window.addEventListener('wheel', function(e) {
 	}
 });
 
+//EventListener qui detecte quand les fleches du clavier sont appuyeées
+window.addEventListener('keydown', function(e) {
+
+	if (e.keyCode == 38) {
+		console.log('scrolling up');
+		if(i > 2){i--;}
+		screens[i].scrollIntoView({behavior: 'smooth'});
+	}
+
+	if (e.keyCode == 40) {
+		console.log('scrolling down');
+		if(i < 6){i++;}
+		screens[i].scrollIntoView({behavior: 'smooth'});
+	}
+});
+
+
+/*---------------------------------------------------*/
+
+/*--------------- SCROLL AUTOMATIQUE ---------------*/
 //Transition qui scroll d'un element à un autre de façon fluide
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 	anchor.addEventListener('click', function (e) {
@@ -49,3 +70,4 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 		document.querySelector(this.getAttribute('href')).scrollIntoView({behavior: 'smooth'});
 	});
 });
+/*---------------------------------------------------*/

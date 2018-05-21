@@ -11,12 +11,17 @@ html, body, .full-height {
 	margin: auto;
 	font-family: Quicksand, Verdana, Arial;
 	overflow: hidden;
+	background-color: LightSteelBlue;
 }
 
 a {
+	width: 100%;
+	text-decoration: none;
+	color: black;	
+	font-weight: bold;
 	outline: 0;
 }
-
+ 
 ul{
 	list-style: none;
 }
@@ -28,18 +33,19 @@ li {
 #menu {
 	position: fixed;
 	width: 17%;
-	background-color: yellow;
 	text-align: center;
 	background-image: url("img/seigaiha.png");
-	-webkit-animation: constructionLeft 3s ease both;
-	animation: constructionLeft 3s ease both;
+	-webkit-animation: constructionLeft 4s ease both;
+	animation: constructionLeft 4s ease both;
 	border: 2px solid black;
 	z-index: 1;
+	box-shadow: 10px 10px 2px 1px rgba(0, 0, 255, .2);
 }
 
-#menu h1{
-	font-family: Pacifico, Arial;
+#menu div{
+	background-color: transparent;
 }
+
 
 #photo{
 	background-image: url("img/photo.jpeg");
@@ -49,8 +55,8 @@ li {
 }
 .title{
 	font-family: Pacifico, Arial;
-	text-align: center;
 }
+
 .bold{
 	font-weight: bold;
 }
@@ -62,12 +68,6 @@ li {
 }
 .strongBlue{
 	color: MidnightBlue;
-}
-a{
-	width: 100%;
-	text-decoration: none;
-	color: black;	
-	font-weight: bold;
 }
 
 .col{
@@ -86,10 +86,9 @@ a{
 
 .content{
 	flex: 5;
-	padding: 25px;
+	padding: 35px;
 	-webkit-animation: fadeIn 4000ms ease both;
 	animation: fadeIn 4000ms ease both;
-	background-color: LightSteelBlue;
 }
 
 .about{
@@ -199,6 +198,9 @@ a{
 	height: 20%;
 	padding:15px;
 	box-shadow: 10px 10px 2px 1px rgba(0, 0, 255, .2);
+	-webkit-animation: constructionRight 2s ease both;
+	animation: constructionRight 2s ease both;
+	margin-top: 7%;
 }
 
 .bubble.bubleft:after {
@@ -231,6 +233,7 @@ a{
 	margin-bottom: -20px;
 }
 
+/*------ Icones -------*/
 .mail-ico{
 	position: absolute;
 	background-image: url("img/mail_ico.svg");
@@ -280,9 +283,11 @@ a{
 	position: relative;
 	background-image: url("img/seigaiha.png");
 	border-radius: .4em;
-	opacity: 0.7;
+	opacity: 1;
 	padding: 5px;
 	box-shadow: 10px 10px 2px 1px rgba(0, 0, 255, .2);
+	-webkit-animation: constructionRight 2s ease both;
+	animation: constructionRight 2s ease both;
 }
 
 .formation:after {
@@ -381,7 +386,7 @@ a{
 	height: 150px;
 	width: 150px;
 	border-radius: 100%;
-	background-size: contain;
+	background-size: 110%;
 	background-repeat: no-repeat;
 	background-position: center;
 	border: 2px solid black;
