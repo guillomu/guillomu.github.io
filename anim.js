@@ -23,6 +23,7 @@ function progressTick(){
 
 /*--------------- DETECTION DU SCROLL ---------------*/
 var screens = document.querySelectorAll('body > div');
+var highlight = document.getElementById('highlight');
 var i = 2;
 
 //EventListener qui detecte quand la molette est activée
@@ -30,13 +31,15 @@ window.addEventListener('wheel', function(e) {
 
 	if (e.deltaY < 0) {
 		console.log('scrolling up');
-		if(i > 2){i--;}
+		if(i > 2){ i--; }
+		highlight.style.top = screens[i].getAttribute('menu-hl');
 		screens[i].scrollIntoView({behavior: 'smooth'});
 	}
 
 	if (e.deltaY > 0) {
 		console.log('scrolling down');
-		if(i < 6){i++;}
+		if(i < 6){ i++; }
+		highlight.style.top = screens[i].getAttribute('menu-hl');
 		screens[i].scrollIntoView({behavior: 'smooth'});
 	}
 });
@@ -47,12 +50,14 @@ window.addEventListener('keydown', function(e) {
 	if (e.keyCode == 38) {
 		console.log('scrolling up');
 		if(i > 2){i--;}
+		highlight.style.top = screens[i].getAttribute('menu-hl');
 		screens[i].scrollIntoView({behavior: 'smooth'});
 	}
 
 	if (e.keyCode == 40) {
 		console.log('scrolling down');
 		if(i < 6){i++;}
+		highlight.style.top = screens[i].getAttribute('menu-hl');
 		screens[i].scrollIntoView({behavior: 'smooth'});
 	}
 });
@@ -67,6 +72,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 		e.preventDefault();
 
+		highlight.style.top = document.querySelector(this.getAttribute('href')).getAttribute('menu-hl');
 		document.querySelector(this.getAttribute('href')).scrollIntoView({behavior: 'smooth'});
 	});
 });
