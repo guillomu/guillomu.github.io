@@ -408,6 +408,22 @@ li {
 	background-image: url("img/doctor.png");
 }
 
+#_2048{
+	background-image: url("img/portfolio_2048.png");
+}
+
+#sheekstore{
+	background-image: url("img/portfolio_sheekstore.png");
+}
+
+#forum_pirate{
+	background-image: url("img/portfolio_fauxrhum.png");
+}
+
+#hell_kitty{
+	background-image: url("img/botdiscord.svg");
+}
+
 .projet {
 	position: relative;
 	text-align: center;
