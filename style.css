@@ -17,7 +17,7 @@ html, body, .full-height {
 a {
 	width: 100%;
 	text-decoration: none;
-	color: black;	
+	color: black;
 	font-weight: bold;
 	outline: 0;
 }
@@ -64,7 +64,7 @@ li {
 	background-image: url("img/photo.jpeg");
 	background-size: 120%;
 	background-repeat: no-repeat;
-	border-radius: 50%;
+	border-radius: 10%;
 }
 .title{
 	font-family: Pacifico, Arial;
@@ -333,7 +333,7 @@ li {
 	background-image: url("img/logo_css.png");
 	background-size: 70%;
 	background-repeat: no-repeat;
-	background-position: center; 
+	background-position: center;
 }
 
 #js{
@@ -454,29 +454,29 @@ circle {
 	animation: grow 2s linear;
 }
 
-@-webkit-keyframes constructionLeft { 
-	0% { 
+@-webkit-keyframes constructionLeft {
+	0% {
 		left:-500px;
 	}
-	100% { 
+	100% {
 		left: 0px;
-	} 
+	}
 }
 
-@-webkit-keyframes constructionRight { 
-	0% { 
+@-webkit-keyframes constructionRight {
+	0% {
 		right:-500px;
 	}
-	100% { 
+	100% {
 		right: 0px;
-	} 
+	}
 }
 
-@-webkit-keyframes fadeIn { 
-	0% { 
+@-webkit-keyframes fadeIn {
+	0% {
 		opacity: 0;
 	}
-	100% { 
+	100% {
 		opacity: 1;
-	} 
+	}
 }
